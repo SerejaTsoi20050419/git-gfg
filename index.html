@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Услуги и сервисы CPS</title>
+</head>
+<body>
+  <!-- Header для телефонов и планшетов -->
+  <header>
+    <div class="header-left">
+      <img src="img/burger.png" alt="Меню">
+      <img src="img/Group (1).png" alt="Логотип" class="vc">
+      <img src="img/divider.png" class="oi">
+    </div>
+    <div class="header-right">
+      <img src="img/call.png" alt="Звонок">
+      <img src="img/chat.png" alt="Чат">
+      <img src="img/profile.png" alt="Профиль">
+      <img src="img/divider.png" class="nm">
+    </div>
+    <div class="header-bv">
+      <img src="img/repair.png" class="xz">
+      <img src="img/checkstatus.png" class="ll">
+    </div>
+  </header>
+
+  <!-- Header для телефонов и планшетов -->
+  
+  <div class="services">
+    <img src="img/highlight.svg" class="pu">
+    <h2 class="services__title">Услуги и сервисы</h2>
+    <h3 class="services__title1">Оставить заявку<img src="img/checkstatus.png" class="sd"></h3>
+    <h3 class="services__title2">Статус ремонта<img src="img/repair.png" class="wq"></h3>
+    <!-- Остальная часть вашего содержимого -->
+    <nav class="services__nav" id="servicesTabs">
+      <button class="services__tab services__tab--active" data-tab="devices">Ремонтируемые бренды</button>
+      <button class="services__tab" data-tab="rfdd">Ремонтируемые устройства</button>
+      <button class="services__tab1" data-tab="extra">Дополнительные услуги</button>
+      <button class="services__tab" data-tab="prices">Цены на услуги</button>
+      <button class="services__tab" data-tab="ggfgfg">Адреса сервисных центров</button>
+      <button class="services__tab" data-tab="special">Специальные цены</button>
+    </nav>
+    <h3 class="gt">Отзывы</h3>
+  
+      <div class="services__content services__content--visible" id="tab-devices">
+      <div class="services__text">
+        <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+      </div>
+      <div id="moreText" class="more-text" style="display: none;">
+        <p>
+          Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+        </p>
+      </div>
+      <span id="readMoreBtn" class="read-more-btn">
+        <img src="img/expand.png" class="cz" id="expandIcon" width="20" height="20" alt="Раскрыть" />
+        <span id="readMoreText">Читать далее</span>
+      </span>
+      <img src="img/Picture Copy.png" alt="CPS логотип" class="services__image"/>
+    </div>
+  </div>
+  
+  
+  <script>
+    // Переключение вкладок
+    const tabs = document.querySelectorAll('.services__tab');
+    const contents = document.querySelectorAll('.services__content');
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        tabs.forEach(t => t.classList.remove('services__tab--active'));
+        tab.classList.add('services__tab--active');
+  
+        contents.forEach(content => content.classList.remove('services__content--visible'));
+  
+        const selectedId = `tab-${tab.dataset.tab}`;
+        const selectedContent = document.getElementById(selectedId);
+        if (selectedContent) {
+          selectedContent.classList.add('services__content--visible');
+        }
+      });
+    });
+    
+    // Кнопка "Читать далее"
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const readMoreText = document.getElementById('readMoreText');
+    const expandIcon = document.getElementById('expandIcon');
+    const moreText = document.getElementById('moreText');
+    
+    readMoreBtn.addEventListener('click', () => {
+      const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
+      if (isHidden) {
+        moreText.style.display = 'block';
+        readMoreText.textContent = 'Скрыть';
+        expandIcon.classList.add('rotate');
+      } else {
+        moreText.style.display = 'none';
+        readMoreText.textContent = 'Читать далее';
+        expandIcon.classList.remove('rotate');
+      }
+    });
+  </script>
+</body>
+</html>

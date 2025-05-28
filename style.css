@@ -1,0 +1,351 @@
+  body {
+      font-family: 'TTLakes', sans-serif;
+      margin: 0;
+      background:#f8f8f8;
+      color: #222;
+    }
+    
+    /* Header - общий стиль */
+    header {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: white;
+    }
+    /* Контейнеры для логотипа/меню и для иконок справа */
+    .header-left,
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+    /* Стили для картинок внутри header */
+    .header-left img,
+    .header-right img {
+      max-height: 40px;
+      margin-right: 10px;
+    }
+    
+    /* Стили для раздела услуг */
+    .services {
+      padding: 18px;
+    }
+    .services__title {
+      font-size: 32px;
+      margin-left: 50px;
+      margin-bottom: 25px;
+      margin-top: -40px;
+    }
+    .services__nav {
+      display: flex;
+      overflow-x: auto;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .services__tab {
+      font-size: 16px;
+      white-space: nowrap;
+      padding: 10px 65px;
+      border: none;
+      background-color: #f8f8f8;
+      color: gray;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+    .services__tab--active {
+      border: 1px solid #00cc99;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 10px 50px;
+      margin-left: 50px;
+    }
+    .services__content {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .services__content--visible {
+      display: flex;
+    }
+    .services__text {
+      font-size: 19px;
+      width: 35%;
+      line-height: 1.4;
+      margin-top: -10px;
+      margin-left: 50px;
+    }
+    .more-text {
+      margin-top: -20px;
+      margin-left: 50px;
+      width: 33%;
+      font-size: 18px;
+    }
+    .read-more-btn {
+      color: black;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: -2px;
+      margin-left: 90px;
+      font-size: 19px;
+      position: relative;
+    }
+    .services__image {
+      width: 800px;
+      height: 50%;
+      margin-top: -10px;
+      margin-left: 1100px;
+      position: fixed;
+      left: -350px;
+      border-radius: 8px;
+    }
+    /* Прочие стили */
+    .cz {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-left: -40px;
+      margin-top: -5px;
+      position: static;
+    }
+    .rotate {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+    .jy {
+      margin-top: 50px;
+      margin-left: 90px;
+      color: gray;
+    }
+    @font-face {
+      font-family: 'TTLakes';
+      src: url('/Shrift/TTLakes-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    .services__tab1 {
+      display: none;
+    }
+    .pu {
+      margin-left: -18px;
+      margin-top: 60px;
+      height: 42px;
+    }
+    .gt {
+      color: gray;
+      margin-left: 100px;
+    }
+    .services__title1 {
+      margin-left: 1030px;
+      margin-top: -50px;
+    }
+    .services__title2 {
+      margin-left: 1346px;
+      margin-top: -40px;
+    }
+    .sd {
+      margin-left: 320px;
+      margin-bottom: -13px;
+    }
+    .wq {
+      margin-left: -296px;
+      margin-top: -10px;
+      margin-bottom: -12px;
+    }
+
+    
+    /* Медиазапрос для телефонов (до 480px) */
+    @media (max-width: 480px) {
+      header {
+        display: flex;
+        flex-direction: row;
+        padding:20px;
+      }
+      .header-right img {
+        display: none;
+      }
+      .header-left img {
+        max-height: 50px;
+        margin-right: 5px;
+      }
+      .services__title {
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: -30px;
+      }
+      .services__text,
+      .more-text {
+        font-size: 15px;
+        margin-left: 5px;
+        width: 100%;
+      }
+      .services__tab {
+        margin-left: 10px;
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+      .services__image {
+        width: 110%;
+        margin: 332px;
+        margin-top: 10px;
+        position: relative;
+      }
+      .read-more-btn {
+        font-size: 15px;
+        margin-top: -5px;
+        margin-left: 40px;
+      }
+      .cz {
+        margin-top: -4px;
+      }
+      .vc {
+        margin-left: 10px;
+      }
+      .ll {
+        margin-left: 10px;
+      }
+      .oi {
+        margin-left: 10px;
+      }
+      .pu {
+        margin-top: 20px;
+        margin-left: -18px;
+        height: 33px;
+        width: 4px;
+      }
+      .services__tab1 {
+        display: flex;
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 10px 20px;
+        border: none;
+        background-color: #f8f8f8;
+        color: gray;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .gt {
+        display: none;
+      }
+      .services__title1 {
+     display: none;
+    }
+    .services__title2 {
+      display: none;
+    }
+     @font-face {
+      font-family: 'TTLakes';
+      src: url('/Shrift/TTLakes-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+  }
+    
+    /* Медиазапрос для планшетов (481px - 1024px) */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      header {
+        display: flex;
+        flex-direction: row;
+        padding: 25px;
+      }
+      .header-left img {
+        max-height: 55px;
+        margin-right: 8px;
+      }
+      .services__title {
+        margin-top: -40px;
+        font-size: 28px;
+        margin-left: 20px;
+      }
+      .services__text {
+        font-size: 15px;
+        margin-left: 20px;
+        width: 44%;
+        margin-top: 10px;
+      }
+      .services__tab {
+        margin-top: 20px;
+        padding: 10px 30px;
+        margin-left: 20px;
+        font-size: 15px;
+      }
+      .services__image {
+        width: 45%;
+        height: 25%;
+        margin: 0 750px;
+        top: 290px;
+        position: absolute;
+        border-radius: 5px;
+      }
+      .read-more-btn {
+        margin-left: 52px;
+        margin-top: -6px;
+      }
+      .cz {
+        margin-top: -5px;
+      }
+      .more-text {
+        font-size: 15px;
+        margin-left: 20px;
+        width: 44%;
+        margin-top: -20px;
+      }
+      .vc {
+        margin-left: 30px;
+      }
+      .header-right {
+        max-height: 55px;
+        margin-right: -474px;
+      }
+      .xz {
+        margin-left: 90px;
+      }
+      .ll {
+        margin-left: 5px;
+      }
+      .oi {
+        margin-left: -128px;
+      }
+      .nm {
+        margin-left: 10px;
+      }
+      .pu {
+        margin-left: -18px;
+        margin-top: 10px;
+      }
+      .services__tab1 {
+        display: flex;
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 10px 20px;
+        border: none;
+        background-color: #f8f8f8;
+        color: gray;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+      }
+      .gt {
+        display: none;
+      }
+       .services__title1 {
+     display: none;
+    }
+    .services__title2 {
+      display: none;
+    }
+     @font-face {
+      font-family: 'TTLakes';
+      src: url('/Shrift/TTLakes-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    }
